@@ -36,7 +36,6 @@ export class CollectionsService {
 
   async findAll() {
     const collections = await this.collectionsRepository.findAll();
-    console.log(collections);
 
     const allSync = collections.every(
       (item) => item.FloorSale !== null && item.FloorSale !== undefined,

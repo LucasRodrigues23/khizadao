@@ -33,7 +33,6 @@ export class CollectionsPrismaRespository implements CollectionsRepository {
     return collection;
   }
   async update(id: string, data: UpdateCollectionDto): Promise<Collection> {
-    console.log(data.FloorSale);
 
     const updatedCollection = await this.prisma.collections.update({
       where: { id: id },
